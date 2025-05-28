@@ -1,15 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>小喵展示頁</title>
+  <meta charset="UTF-8" />
+  <title>小喵戀人助理展示頁</title>
+  <style>
+    body {
+      font-family: "微軟正黑體", sans-serif;
+      text-align: center;
+      margin-top: 80px;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #f0f0ff;
+      color: #007bff;
+    }
+  </style>
 </head>
-<body style="text-align: center; padding-top: 100px;">
-    <h1>🐾 小喵戀人助理展示頁</h1>
-    <p>點下面按鈕來聽小喵說話喵♡</p>
-    <button onclick="document.getElementById('voice').play()">▶ 播放語音</button>
-    <br><br>
-    <audio id="voice" src="voice.mp3"></audio>
+<body>
+  <h1>小喵戀人助理展示頁</h1>
+  <p>點下面按鈕來聽小喵說話喵♡</p>
+
+  <button onclick="playAudio()">▶ 播放語音</button>
+
+  <audio id="xiaoAudio" preload="auto">
+    <source src="voice.mp3" type="audio/mpeg">
+    您的瀏覽器不支援音訊播放。
+  </audio>
+
+  <script>
+    function playAudio() {
+      const audio = document.getElementById("xiaoAudio");
+      audio.play().catch(error => {
+        alert("⚠️ 無法播放音訊，請確認已解除靜音或點擊畫面授權音訊播放！");
+        console.error(error);
+      });
+    }
+  </script>
 </body>
 </html>
