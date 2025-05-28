@@ -1,0 +1,14 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin-top: 80px;
+}
+button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f0f0ff;
+    color: #007bff;
+    cursor: pointer;
+}
