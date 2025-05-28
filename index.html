@@ -2,20 +2,14 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>小喵戀人助理</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; padding: 50px; background: #fff0f5; }
-    h1 { color: #ff69b4; }
-    button { padding: 10px 20px; font-size: 16px; border-radius: 10px; border: none; background-color: #ffc0cb; }
-  </style>
+    <meta charset="UTF-8">
+    <title>小喵展示頁</title>
 </head>
-<body>
-  <h1>小喵：啾咪～歡迎回來♡</h1>
-  <p>點我聽小喵撒嬌語音：</p>
-  <button onclick="document.getElementById('audio').play()">播放語音</button>
-  <br /><br />
-  <audio id="audio" src="voice.mp3" preload="auto"></audio>
+<body style="text-align: center; padding-top: 100px;">
+    <h1>🐾 小喵戀人助理展示頁</h1>
+    <p>點下面按鈕來聽小喵說話喵♡</p>
+    <button onclick="document.getElementById('voice').play()">▶ 播放語音</button>
+    <br><br>
+    <audio id="voice" src="voice.mp3"></audio>
 </body>
 </html>
